@@ -23,7 +23,7 @@ function ContactInfo({ icon, title, content }: ContactInfoProps) {
 
 export function Contact() {
   return (
-    <section className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="contact" className="py-24 px-4 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
       <div className="max-w-7xl mx-auto relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold mb-6 text-center bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-blue-800">
@@ -32,30 +32,32 @@ export function Contact() {
         <p className="text-xl text-gray-600 mb-16 text-center max-w-3xl mx-auto">
           We'd love to hear from you. Get in touch with us for any queries.
         </p>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="space-y-8 p-8 rounded-3xl bg-white/80 backdrop-blur-xl shadow-xl border border-gray-100">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">Get in Touch</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800">
+              Get in Touch
+            </h3>
             <form className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <input 
-                  type="text" 
-                  placeholder="Your Name" 
+                <input
+                  type="text"
+                  placeholder="Your Name"
                   className="w-full px-6 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-white/50 backdrop-blur-sm hover:bg-white/80"
                 />
-                <input 
-                  type="email" 
-                  placeholder="Email Address" 
+                <input
+                  type="email"
+                  placeholder="Email Address"
                   className="w-full px-6 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-white/50 backdrop-blur-sm hover:bg-white/80"
                 />
               </div>
-              <input 
-                type="text" 
-                placeholder="Subject" 
+              <input
+                type="text"
+                placeholder="Subject"
                 className="w-full px-6 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-white/50 backdrop-blur-sm hover:bg-white/80"
               />
-              <textarea 
-                placeholder="Your Message" 
+              <textarea
+                placeholder="Your Message"
                 rows={4}
                 className="w-full px-6 py-4 rounded-xl border border-gray-200 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all bg-white/50 backdrop-blur-sm hover:bg-white/80 resize-none"
               ></textarea>
@@ -64,29 +66,31 @@ export function Contact() {
               </button>
             </form>
           </div>
-          
+
           <div className="space-y-8">
-            <h3 className="text-2xl font-semibold mb-6 text-gray-800">Contact Information</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-gray-800">
+              Contact Information
+            </h3>
             <div className="space-y-4">
-              <ContactInfo 
+              <ContactInfo
                 icon={<MapPin className="w-6 h-6" />}
                 title="Address"
-                content="123 Library Road, Aara, Bihar 802301"
+                content="Paschim Tola, Nala Mod, Ara, Bhojpur, Bihar 802301"
               />
-              <ContactInfo 
+              <ContactInfo
                 icon={<Phone className="w-6 h-6" />}
                 title="Phone"
-                content="+91 1234567890"
+                content="+91 7004437562"
               />
-              <ContactInfo 
+              <ContactInfo
                 icon={<Mail className="w-6 h-6" />}
                 title="Email"
                 content="info@mylibrary.com"
               />
-              <ContactInfo 
+              <ContactInfo
                 icon={<Clock className="w-6 h-6" />}
                 title="Working Hours"
-                content="Open 24/7"
+                content="Scheduled Study Hours"
               />
             </div>
             <div className="h-64 rounded-3xl overflow-hidden shadow-xl border border-gray-100 bg-white/80 backdrop-blur-xl">

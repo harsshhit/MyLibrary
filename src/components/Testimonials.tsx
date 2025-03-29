@@ -36,27 +36,34 @@ function TestimonialCard({ name, role, content, rating, image }: TestimonialCard
 export function Testimonials() {
   const testimonials = [
     {
-      name: "Priya Singh",
+      name: "Pooja Yadav",
       role: "UPSC Aspirant",
-      content: "The peaceful environment at MyLibrary helped me maintain my focus during preparation. The 24/7 access is a game-changer!",
+      content:
+        "A peaceful place with no disturbances. The scheduled study time helps maintain discipline. Good for serious students!",
       rating: 5,
-      image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
+      image:
+        "https://media.istockphoto.com/id/1272815911/photo/young-indian-female-university-student-stock-photo.jpg?s=612x612&w=0&k=20&c=Iwdc08GR3pw8_Qg3_nabNJUQYTo52EU3dvW4tsth1tE=",
     },
     {
-      name: "Rahul Kumar",
-      role: "Medical Student",
-      content: "Perfect place for serious students. The facilities and study resources are excellent. Highly recommended!",
-      rating: 5,
-      image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
-    },
-    {
-      name: "Anjali Sharma",
-      role: "Bank PO Aspirant",
-      content: "Found my perfect study spot here. The staff is supportive and the environment is exactly what I needed.",
+      name: "Ravi Verma",
+      role: "Engineering Student",
+      content:
+        "Affordable and clean environment. Wi-Fi speed is good, and having drinking water available is helpful. Would recommend to others.",
       rating: 4,
-      image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=256&q=80"
-    }
+      image:
+        "https://images.unsplash.com/photo-1604177091072-b7b677a077f6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWFuJTIwc3R1ZGVudHxlbnwwfHwwfHx8MA%3D%3D",
+    },
+    {
+      name: "Suman Tiwari",
+      role: "Bank Exam Aspirant",
+      content:
+        "Good place for self-study. The environment is quiet, and power backup is a plus. It would be great if they had more newspapers.",
+      rating: 4,
+      image:
+        "https://www.shutterstock.com/image-photo/positive-young-indian-woman-student-260nw-2385200433.jpg",
+    },
   ];
+
 
   return (
     <section className="py-24 px-4">

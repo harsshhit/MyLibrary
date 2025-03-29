@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wifi, Coffee, Book, Users, Monitor, Lightbulb, Lock, Phone } from 'lucide-react';
+import { Wifi, Coffee, Book,  Lightbulb,  Phone } from 'lucide-react';
 
 interface FacilityCardProps {
   icon: React.ReactNode;
@@ -20,48 +20,33 @@ function FacilityCard({ icon, title, description }: FacilityCardProps) {
 }
 
 export function Facilities() {
-  const facilities = [
-    {
-      icon: <Wifi className="w-8 h-8" />,
-      title: "High-Speed Wi-Fi",
-      description: "Stay connected with our reliable internet connection"
-    },
-    {
-      icon: <Coffee className="w-8 h-8" />,
-      title: "Café Corner",
-      description: "Fresh beverages and healthy snacks available"
-    },
-    {
-      icon: <Book className="w-8 h-8" />,
-      title: "Study Resources",
-      description: "Access to books, magazines, and digital materials"
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Discussion Zones",
-      description: "Dedicated areas for group studies and discussions"
-    },
-    {
-      icon: <Monitor className="w-8 h-8" />,
-      title: "Digital Library",
-      description: "Access to online resources and study materials"
-    },
-    {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "Power Backup",
-      description: "Uninterrupted power supply for continuous studying"
-    },
-    {
-      icon: <Lock className="w-8 h-8" />,
-      title: "Lockers",
-      description: "Secure storage for your belongings"
-    },
-    {
-      icon: <Phone className="w-8 h-8" />,
-      title: "Support",
-      description: "24/7 staff assistance available"
-    }
-  ];
+ const facilities = [
+   {
+     icon: <Wifi className="w-8 h-8" />,
+     title: "High-Speed Wi-Fi",
+     description: "Stay connected with our reliable internet connection",
+   },
+   {
+     icon: <Coffee className="w-8 h-8" />,
+     title: "Water Availability",
+     description: "Clean drinking water provided for all visitors",
+   },
+   {
+     icon: <Book className="w-8 h-8" />,
+     title: "Newspapers",
+     description: "Stay updated with daily newspapers",
+   },
+   {
+     icon: <Lightbulb className="w-8 h-8" />,
+     title: "Power Backup",
+     description: "Uninterrupted power supply for continuous studying",
+   },
+   {
+     icon: <Phone className="w-8 h-8" />,
+     title: "Support",
+     description: "24/7 staff assistance available",
+   },
+ ];
 
   return (
     <section className="py-24 px-4">

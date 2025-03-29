@@ -1,9 +1,7 @@
-import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { Features } from './components/Features';
-import { StudySpaces } from './components/StudySpaces';
-import { Resources } from './components/Resources';
+
 import { Facilities } from './components/Facilities';
 import { ExamPrep } from './components/ExamPrep';
 import { Membership } from './components/Membership';
@@ -19,8 +17,7 @@ function App() {
         <Navbar />
         <Hero />
         <Features />
-        <StudySpaces />
-        <Resources />
+       
         <Facilities />
         <ExamPrep />
         <Membership />

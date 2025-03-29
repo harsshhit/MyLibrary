@@ -14,7 +14,17 @@ function NavItem({ label, href, items }: NavItemProps) {
 
   const handleClick = (e: React.MouseEvent, itemHref: string) => {
     e.preventDefault();
-    navigate(itemHref);
+
+    // Check if it's an anchor link (starts with #)
+    if (itemHref.startsWith("#")) {
+      const element = document.getElementById(itemHref.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate(itemHref);
+    }
+
     setIsOpen(false);
   };
 
@@ -68,36 +78,9 @@ export function Navbar() {
   }, []);
 
   const navItems: NavItemProps[] = [
-    {
-      label: "Study Spaces",
-      href: "#spaces",
-      items: [
-        { label: "Silent Zone", href: "#silent" },
-        { label: "Group Study", href: "#group" },
-        { label: "Private Rooms", href: "#private" },
-      ],
-    },
-    {
-      label: "Resources",
-      href: "#resources",
-      items: [
-        { label: "Books & Materials", href: "#books" },
-        { label: "Digital Library", href: "#digital" },
-        { label: "Test Series", href: "#tests" },
-      ],
-    },
     { label: "Membership", href: "#membership" },
     { label: "Contact", href: "#contact" },
   ];
-
-  const handleJoinNow = () => {
-    navigate('/join');
-  };
-
-  // const handleExplore = () => {
-  //   // Add your explore logic here
-  //   window.location.href = "/explore";
-  // };
 
   return (
     <nav
@@ -110,11 +93,11 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a 
-            href="/" 
+          <a
+            href="/"
             onClick={(e) => {
               e.preventDefault();
-              navigate('/');
+              navigate("/");
             }}
             className="flex items-center space-x-3 group"
           >
@@ -123,7 +106,7 @@ export function Navbar() {
               <Library className="w-10 h-10 text-white relative transition-transform duration-300 group-hover:scale-110" />
             </div>
             <span className="text-2xl font-bold text-white tracking-tight">
-              MyLibrary
+              {"आरा"} Library
             </span>
           </a>
 
@@ -132,33 +115,6 @@ export function Navbar() {
             {navItems.map((item, index) => (
               <NavItem key={index} {...item} />
             ))}
-          </div>
-
-          {/* Desktop Right Section */}
-          <div className="hidden lg:flex items-center space-x-6">
-            <button 
-              onClick={handleJoinNow}
-              className="relative group overflow-hidden rounded-full cursor-pointer"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-500 to-blue-700 opacity-80 group-hover:opacity-100 transition-all duration-500"></div>
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-[radial-gradient(circle_at_center,_white_0%,_transparent_100%)] transition-opacity duration-500"></div>
-              <span className="relative px-8 py-3 flex items-center justify-center text-white font-semibold tracking-wide transform group-hover:scale-[1.02] transition-all duration-300">
-                Join Now
-                <svg
-                  className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </span>
-            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -176,11 +132,13 @@ export function Navbar() {
       </div>
 
       {/* Mobile Menu */}
-      <div className={`lg:hidden transition-all duration-300 ${
-        isMobileMenuOpen
-          ? "h-[calc(100vh-5rem)] opacity-100"
-          : "h-0 opacity-0"
-      } bg-gray-900/95 backdrop-blur-lg overflow-hidden border-t border-white/10`}>
+      <div
+        className={`lg:hidden transition-all duration-300 ${
+          isMobileMenuOpen
+            ? "h-[calc(100vh-5rem)] opacity-100"
+            : "h-0 opacity-0"
+        } bg-gray-900/95 backdrop-blur-lg overflow-hidden border-t border-white/10`}
+      >
         <div className="px-4 py-6 space-y-4">
           {navItems.map((item, index) => (
             <div key={index} className="border-b border-white/10 pb-4">
@@ -188,8 +146,20 @@ export function Navbar() {
                 href={item.href}
                 onClick={(e) => {
                   e.preventDefault();
-                  navigate(item.href);
-                  setIsMobileMenuOpen(false);
+
+                  // Check if it's an anchor link (starts with #)
+                  if (item.href.startsWith("#")) {
+                    const element = document.getElementById(
+                      item.href.substring(1)
+                    );
+                    if (element) {
+                      element.scrollIntoView({ behavior: "smooth" });
+                      setIsMobileMenuOpen(false);
+                    }
+                  } else {
+                    navigate(item.href);
+                    setIsMobileMenuOpen(false);
+                  }
                 }}
                 className="text-lg font-medium text-white/90 hover:text-white transition-all duration-300 hover:translate-x-2 inline-block"
               >
@@ -210,31 +180,6 @@ export function Navbar() {
               )}
             </div>
           ))}
-          <div className="pt-4">
-            <button 
-              onClick={handleJoinNow}
-              className="w-full relative group overflow-hidden rounded-xl cursor-pointer"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-500 to-blue-700 opacity-80 group-hover:opacity-100 transition-all duration-500"></div>
-              <div className="absolute inset-0 opacity-0 group-hover:opacity-20 bg-[radial-gradient(circle_at_center,_white_0%,_transparent_100%)] transition-opacity duration-500"></div>
-              <span className="relative w-full px-8 py-3 flex items-center justify-center text-white font-semibold tracking-wide transform group-hover:scale-[1.02] transition-all duration-300">
-                Join Now
-                <svg
-                  className="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform duration-300"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M13 7l5 5m0 0l-5 5m5-5H6"
-                  />
-                </svg>
-              </span>
-            </button>
-          </div>
         </div>
       </div>
     </nav>

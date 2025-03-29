@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, Users, BookOpen, Trophy, Target, Brain } from 'lucide-react';
+import { Calendar, Trophy } from 'lucide-react';
 
 interface PrepCardProps {
   title: string;
@@ -46,29 +46,29 @@ function PrepCard({ title, description, date, image, icon, buttonText }: PrepCar
 
 export function ExamPrep() {
   const prepItems = [
-    {
-      title: "UPSC Strategy Session",
-      description: "Learn effective strategies from top rankers and expert mentors",
-      date: "Next Session: March 15",
-      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      icon: <Target className="h-5 w-5 text-white" />,
-      buttonText: "Register Now"
-    },
-    {
-      title: "Study Group Formation",
-      description: "Join or create study groups for collaborative preparation",
-      image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      icon: <Users className="h-5 w-5 text-white" />,
-      buttonText: "Find Group"
-    },
-    {
-      title: "Mock Test Series",
-      description: "Weekly mock tests with detailed analysis and solutions",
-      date: "Every Sunday",
-      image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      icon: <BookOpen className="h-5 w-5 text-white" />,
-      buttonText: "Enroll Now"
-    },
+    // {
+    //   title: "UPSC Strategy Session",
+    //   description: "Learn effective strategies from top rankers and expert mentors",
+    //   date: "Next Session: March 15",
+    //   image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    //   icon: <Target className="h-5 w-5 text-white" />,
+    //   buttonText: "Register Now"
+    // },
+    // {
+    //   title: "Study Group Formation",
+    //   description: "Join or create study groups for collaborative preparation",
+    //   image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    //   icon: <Users className="h-5 w-5 text-white" />,
+    //   buttonText: "Find Group"
+    // },
+    // {
+    //   title: "Mock Test Series",
+    //   description: "Weekly mock tests with detailed analysis and solutions",
+    //   date: "Every Sunday",
+    //   image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    //   icon: <BookOpen className="h-5 w-5 text-white" />,
+    //   buttonText: "Enroll Now"
+    // },
     {
       title: "Success Stories",
       description: "Interactive sessions with successful candidates",
@@ -77,14 +77,14 @@ export function ExamPrep() {
       icon: <Trophy className="h-5 w-5 text-white" />,
       buttonText: "Read Stories"
     },
-    {
-      title: "Expert Lectures",
-      description: "Subject-specific guidance from experienced faculty",
-      date: "Bi-weekly",
-      image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
-      icon: <Brain className="h-5 w-5 text-white" />,
-      buttonText: "View Schedule"
-    },
+    // {
+    //   title: "Expert Lectures",
+    //   description: "Subject-specific guidance from experienced faculty",
+    //   date: "Bi-weekly",
+    //   image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80",
+    //   icon: <Brain className="h-5 w-5 text-white" />,
+    //   buttonText: "View Schedule"
+    // },
     {
       title: "Exam Calendar",
       description: "Stay updated with important dates and deadlines",
