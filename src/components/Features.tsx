@@ -55,7 +55,7 @@ export function Features() {
         </h2>
         <p className="text-xl text-gray-600 mb-16 max-w-3xl mx-auto">
           We provide a quiet, distraction-free study space for students,
-          competitive exam aspirants, and working professionals in Aara, Bihar.
+          competitive exam aspirants, and working professionals in Arrah, Bihar.
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
